@@ -1,14 +1,15 @@
 import React from 'react';
 
+import NavBar from '../components/header/Navbar';
+import CarouselAuto from '../components/Carousel/CarouselAuto';
+
 import { fade, makeStyles } from '@material-ui/core/styles';
 
-import { Grid, Paper, Container, Typography, Box, AppBar, Toolbar, IconButton, InputBase } from '@material-ui/core';
+import { Grid, Paper, Container, Typography, Box } from '@material-ui/core';
 
 import TimerIcon from '@material-ui/icons/Timer';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -128,43 +129,16 @@ function Home() {
 
     return (
         <div className={classes.root}>
-            <Grid container style={{ backgroundColor: '#f8f9fa' }}>
+            <Grid container style={{ backgroundColor: '#f8f9fa'}}>
 
                 <Grid item xs={12}>
-                    <AppBar>
-                        <Toolbar>
-                            <IconButton
-                                edge="start"
-                                className={classes.menuButton}
-                                color="inherit"
-                                aria-label="open drawer"
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography className={classes.title} variant="h6" noWrap>
-                                Quickie
-                            </Typography>
-                            <div className={classes.search}>
-                                <div className={classes.searchIcon}>
-                                    <SearchIcon />
-                                </div>
-                                <InputBase
-                                    placeholder="Search…"
-                                    classes={{
-                                        root: classes.inputRoot,
-                                        input: classes.inputInput,
-                                    }}
-                                    inputProps={{ 'aria-label': 'search' }}
-                                />
-                            </div>
-                        </Toolbar>
-                    </AppBar>
+                    <NavBar />
                 </Grid>
 
                 <div style={{ marginBottom: '40px' }} />
 
 
-                <Grid container className={classes.section_about} xs={12}>
+                <Grid container id="home" className={classes.section_about} xs={12}>
                     <Grid item xs={12} sm={12} md={6}>
                         <img className={classes.img} src="/images/undraw_add_to_cart_vkjp.svg" alt="Delivery" />
                     </Grid>
@@ -189,7 +163,7 @@ function Home() {
                     </Grid>
                 </Grid>
 
-                <Grid container >
+                <Grid container id="about">
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
                             How does it work?
@@ -266,7 +240,7 @@ function Home() {
                     </Container>
                 </Grid>
 
-                <Grid container  >
+                <Grid container id="features" >
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
                             Our features
@@ -328,7 +302,7 @@ function Home() {
                     </Container>
                 </Grid>
 
-                <Grid className={classes.container} container >
+                <Grid className={classes.container} container id="download">
                     <Grid className={classes.container} container >
                         <Container className={classes.container} maxWidth="md">
                             <Grid item xs={4}>
@@ -361,8 +335,21 @@ function Home() {
                     </Grid>
                 </Grid>
 
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>xs=12 (As seen On)</Paper>
+                <Grid container item xs={12}>
+                    <Grid item xs={12}>
+                        <Typography variant="h4" color="primary" align="center">
+                            Quickie as seen on
+                        </Typography>
+                    </Grid>
+
+                    <Container className={classes.container} maxWidth="lg">
+                        <Grid container xs={12} spacing={2} >
+                            <Box className={classes.box} style={{backgroundColor: 'white'}}>
+                                <CarouselAuto />
+                            </Box>
+                            
+                        </Grid>
+                    </Container>
                 </Grid>
 
                 <Grid item xs={12}>
