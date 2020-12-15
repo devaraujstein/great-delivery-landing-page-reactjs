@@ -83,7 +83,39 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         gap: theme.spacing(10),
         margin: '0 20px',
+    },
+    section_download: {
+        color: '#fff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+
+        [theme.breakpoints.down('md')]: {
+            flexDirection: 'column-reverse',
+            textAlign: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+        },
+    },
+    section_download_breakpoint_s_img: {
+        color: '#fff',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+
+        [theme.breakpoints.down('md')]: {
+            flexDirection: 'column',
+            textAlign: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100%',
+            marginTop: '50px'
+        },
     }
+
 }));
 
 function Home() {
@@ -130,7 +162,7 @@ function Home() {
 
                 {/* ABOUT */}
 
-                <Grid container id="about">
+                <Grid container id="about" style={{margin: '25px 0'}}>
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
                             How does it work?
@@ -209,7 +241,7 @@ function Home() {
 
                 {/* FEATURES */}
 
-                <Grid container id="features" >
+                <Grid container id="features" style={{margin: '25px 0'}}>
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
                             Our features
@@ -273,13 +305,62 @@ function Home() {
 
                 {/* DOWNLOAD */}
 
-                <Grid>
+                <Grid container id="download" style={{margin: '25px 0'}}>
+                    <Grid item style={{ backgroundColor: '#f9423a', width: '100%' }}>
+                        <Container className={classes.container} maxWidth="lg">
+                            <Grid container className={classes.section_download} spacing={4}>
+                                <Grid item xs={12} md={6} lg={6}>
+                                    <img className={classes.img} style={{ marginBottom: '-100px' }} src="/images/first-image-download.png" alt="Phone" />
+                                </Grid>
+                                <Grid item xs={12} md={6} lg={6} style={{ display: 'grid', gap: '20px' }}>
+                                    <Typography variant="h4">
+                                        Your groceries delivered in as little as 1 Hour!
+                                    </Typography>
+                                    <Box component="div">
+                                        <a style={{ marginRight: '20px' }} href="/"><img src="/images/apple-store-badge.svg" alt="Apple Store" /></a>
+                                        <a href="/"><img src="/images/google-play-badge.svg" alt="Google Play" /></a>
+                                    </Box>
+                                    <Typography variant="h4">
+                                        Download the App
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Container>
+                    </Grid>
+                    <Grid item style={{ width: '100%' }}>
+                        <Container className={classes.container} maxWidth="lg">
+                            <Grid container className={classes.section_download_breakpoint_s_img} style={{ color: '#f9423a' }} spacing={5}>
+                                <Grid item xs={12} md={6} lg={3} style={{ marginRight: '60px' }} >
+                                    <Typography variant="h4" >
+                                        Order from your favourite supermarket.
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={12} md={6} lg={4} style={{ marginBottom: '-27px' }}>
+                                    <img className={classes.img} src="/images/second-image-download.png" alt="Phone" />
+                                </Grid>
 
+                            </Grid>
+                        </Container>
+                    </Grid>
+                    <Grid item xs={12} style={{ backgroundColor: '#00c6c7', width: '100%'}}>
+                        <Container className={classes.container} maxWidth="lg">
+                            <Grid container className={classes.section_download} spacing={5} >
+                                <Grid item xs={12} md={6} lg={4} style={{ marginRight: '60px', marginBottom: '-27px' }} >
+                                    <img className={classes.img} src="/images/food-bag.png" alt="Phone" />
+                                </Grid>
+                                <Grid item xs={12} md={6} lg={4} >
+                                    <Typography variant="h4">
+                                        Enjoy a hassle free shopping experience.
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Container>
+                    </Grid>
                 </Grid>
 
                 {/* QUICKIE AS SEEN ON */}
 
-                <Grid container item xs={12}>
+                <Grid container item xs={12} style={{margin: '25px 0'}}>
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
                             Quickie as seen on
