@@ -2,14 +2,16 @@ import React from 'react';
 
 import NavBar from '../components/header/Navbar';
 import CarouselAuto from '../components/Carousel/CarouselAuto';
+import Footer from '../components/footer/Footer';
 
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
-import { Grid, Paper, Container, Typography, Box } from '@material-ui/core';
+import { Grid, Paper, Container, Typography, Box, Button, Divider } from '@material-ui/core';
 
 import TimerIcon from '@material-ui/icons/Timer';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
         height: '100vh',
     },
     container: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         marginTop: theme.spacing(3),
         marginBottom: theme.spacing(3),
     },
@@ -36,7 +41,6 @@ const useStyles = makeStyles((theme) => ({
     img: {
         width: '100%',
         height: '100%',
-        margin: theme.spacing(3)
     },
     section_about: {
         alignItems: 'center',
@@ -71,57 +75,15 @@ const useStyles = makeStyles((theme) => ({
 
         [theme.breakpoints.down('md')]: {
             textAlign: 'center',
+            width: '100%',
         },
     },
-    menuButton: {
-        marginRight: theme.spacing(2),
-    },
-    title: {
-        flexGrow: 1,
-        display: 'none',
-        [theme.breakpoints.up('sm')]: {
-            display: 'block',
-        },
-    },
-    search: {
-        position: 'relative',
-        borderRadius: theme.shape.borderRadius,
-        backgroundColor: fade(theme.palette.common.white, 0.15),
-        '&:hover': {
-            backgroundColor: fade(theme.palette.common.white, 0.25),
-        },
-        marginLeft: 0,
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: 'auto',
-        },
-    },
-    searchIcon: {
-        padding: theme.spacing(0, 2),
-        height: '100%',
-        position: 'absolute',
-        pointerEvents: 'none',
+    footer_items: {
+        color: '#fff',
         display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    inputRoot: {
-        color: 'inherit',
-    },
-    inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            width: '12ch',
-            '&:focus': {
-                width: '20ch',
-            },
-        },
-    },
+        gap: theme.spacing(10),
+        margin: '0 20px',
+    }
 }));
 
 function Home() {
@@ -129,7 +91,9 @@ function Home() {
 
     return (
         <div className={classes.root}>
-            <Grid container style={{ backgroundColor: '#f8f9fa'}}>
+            <Grid container style={{ backgroundColor: '#f8f9fa' }}>
+
+                {/* NAVBAR */}
 
                 <Grid item xs={12}>
                     <NavBar />
@@ -137,6 +101,7 @@ function Home() {
 
                 <div style={{ marginBottom: '40px' }} />
 
+                {/* HOME */}
 
                 <Grid container id="home" className={classes.section_about} xs={12}>
                     <Grid item xs={12} sm={12} md={6}>
@@ -162,6 +127,8 @@ function Home() {
                         </Typography>
                     </Grid>
                 </Grid>
+
+                {/* ABOUT */}
 
                 <Grid container id="about">
                     <Grid item xs={12}>
@@ -240,6 +207,8 @@ function Home() {
                     </Container>
                 </Grid>
 
+                {/* FEATURES */}
+
                 <Grid container id="features" >
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
@@ -302,38 +271,13 @@ function Home() {
                     </Container>
                 </Grid>
 
-                <Grid className={classes.container} container id="download">
-                    <Grid className={classes.container} container >
-                        <Container className={classes.container} maxWidth="md">
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.1)</Paper>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.1)</Paper>
-                            </Grid>
-                        </Container>
-                    </Grid>
-                    <Grid className={classes.container} container >
-                        <Container className={classes.container} maxWidth="md">
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.2)</Paper>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.2)</Paper>
-                            </Grid>
-                        </Container>
-                    </Grid>
-                    <Grid className={classes.container} container >
-                        <Container className={classes.container} maxWidth="md">
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.3)</Paper>
-                            </Grid>
-                            <Grid item xs={4}>
-                                <Paper className={classes.paper}>xs=6 (Download App Sec.3)</Paper>
-                            </Grid>
-                        </Container>
-                    </Grid>
+                {/* DOWNLOAD */}
+
+                <Grid>
+
                 </Grid>
+
+                {/* QUICKIE AS SEEN ON */}
 
                 <Grid container item xs={12}>
                     <Grid item xs={12}>
@@ -344,16 +288,18 @@ function Home() {
 
                     <Container className={classes.container} maxWidth="lg">
                         <Grid container xs={12} spacing={2} >
-                            <Box className={classes.box} style={{backgroundColor: 'white'}}>
+                            <Box className={classes.box} style={{ backgroundColor: 'white' }}>
                                 <CarouselAuto />
                             </Box>
-                            
+
                         </Grid>
                     </Container>
                 </Grid>
 
-                <Grid item xs={12}>
-                    <Paper className={classes.paper}>xs=12 (Footer)</Paper>
+                {/* FOOTER */}
+
+                <Grid container xs={12} justify="center" style={{ backgroundColor: '#f9423a' }}>
+                    <Footer />
                 </Grid>
             </Grid>
         </div>
