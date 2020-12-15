@@ -6,7 +6,7 @@ import Footer from '../components/footer/Footer';
 
 import { makeStyles } from '@material-ui/core/styles';
 
-import { Grid, Paper, Container, Typography, Box, Button, Divider } from '@material-ui/core';
+import { Grid, Paper, Container, Typography, Box } from '@material-ui/core';
 
 import TimerIcon from '@material-ui/icons/Timer';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
