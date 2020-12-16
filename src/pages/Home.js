@@ -378,10 +378,11 @@ function Home() {
                 </Grid>
 
                 {/* FOOTER */}
-
-                <Grid container xs={12} justify="center" style={{ backgroundColor: '#f9423a' }}>
+                <Grid item xs={12}>
                     <Footer />
                 </Grid>
+                
+                
             </Grid>
         </div>
     );
