@@ -4,7 +4,7 @@ import NavBar from '../components/header/Navbar';
 import Footer from '../components/footer/Footer';
 
 import { makeStyles } from '@material-ui/core/styles';
-import { Button,Grid, TextField, Typography } from '@material-ui/core';
+import { Button, Grid, TextField, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
     text_field: {
         display: 'flex',
-        flexGrow: 1,    
+        flexGrow: 1,
     }
 }));
 
@@ -55,7 +55,7 @@ function Contact() {
 
                 <Grid item container xs={12} justify="center" alignItems="center">
                     <Grid item container xs={12} className={classes.main}>
-                        <Grid item container xs={12} sm={12} md={6} lg={6}  alignItems="center" spacing={5}>
+                        <Grid item container xs={12} sm={12} md={6} lg={6} alignItems="center" spacing={5}>
                             <Grid item container className={classes.address_info} >
                                 <Grid item xs={5}>
                                     <Typography color="primary">
@@ -74,7 +74,7 @@ function Contact() {
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={5}>
-                                    <Typography align="left" style={{color: '#17a2b8'}}>
+                                    <Typography align="left" style={{ color: '#17a2b8' }}>
                                         Email : support@quickie.eu
                                     </Typography>
                                 </Grid>
@@ -110,7 +110,7 @@ function Contact() {
                                                 />
                                             </Grid>
                                             <Grid item xs={12} >
-                                                <Button style={{width: '100%'}} color="primary" variant="contained">
+                                                <Button style={{ width: '100%' }} color="primary" variant="contained">
                                                     Send Message
                                                 </Button>
                                             </Grid>
@@ -122,9 +122,7 @@ function Contact() {
                     </Grid>
                 </Grid>
 
-                
-                
-                <Grid item xs={12} style={{marginTop: '50px'}}>
+                <Grid item xs={12} style={{ marginTop: '50px' }}>
                     <Footer />
                 </Grid>
             </Grid>

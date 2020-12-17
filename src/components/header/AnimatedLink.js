@@ -27,10 +27,10 @@ const styles = {
 };
 
 function AnimatedLink(props) {
-  const { classes, children, className, ...other } = props;
+  const { classes, children, className, href ,...other } = props;
 
   return (
-    <Link className={clsx(classes.root, className)} {...other}>
+    <Link className={clsx(classes.root, className)} href={href} {...other}>
       {children || "class names"}
     </Link>
   );

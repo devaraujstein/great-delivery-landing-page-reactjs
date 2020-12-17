@@ -67,8 +67,8 @@ export default function ElevateAppBar(props) {
     { link: "/#about", name: "ABOUT", icon: <PermIdentityIcon /> },
     { link: "/#features", name: "features", icon: <WorkIcon /> },
     { link: "/#download", name: "download quickie", icon: <MailIcon /> },
-    { link: "/#contact", name: "contact", icon: <MailIcon /> },
-    { link: "/#work", name: "work with quickie", icon: <MailIcon /> },
+    { link: "/contact", name: "contact", icon: <MailIcon /> },
+    { link: "/work", name: "work with quickie", icon: <MailIcon /> },
   ];
 
   return (
