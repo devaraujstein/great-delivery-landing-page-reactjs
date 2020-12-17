@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
         boxSizing: 'border-box',
         width: '100%',
         height: '100vh',
-        backgroundColor: '#f7f6f2'
     },
     main: {
         display: 'flex',
@@ -45,7 +44,7 @@ function Contact() {
 
     return (
         <div className={classes.root}>
-            <Grid container xs={12}>
+            <Grid container xs={12} style={{backgroundColor: '#f7f6f2', with: '100%'}}>
 
                 <Grid item xs={12}>
                     <NavBar />
