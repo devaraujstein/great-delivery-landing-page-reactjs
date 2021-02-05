@@ -32,7 +32,7 @@ function Footer() {
                     <Grid container justify="space-around" alignItems="center" >
                         <Grid item style={{ display: 'inline-block' }}>
                             <Typography variant="h4">
-                                QUICKIE
+                                Great Delivery
                             </Typography>
                         </Grid>
                         <Grid item style={{ display: 'inline-block' }}>
@@ -93,8 +93,7 @@ function Footer() {
                     <Grid container justify="space-around" alignItems="center">
                         <Grid item style={{ display: 'inline-block' }}>
                             <Typography>
-                                2015 - 2020 © Copyright Buymie Technologies Limited,
-                                Company Registration Number: ??????, VAT: ??????????? . All rights Reserved.
+                                2020 - 2021 © Copyright Great Delivery Technologies Limited, All rights Reserved.
                                 </Typography>
                         </Grid>
                     </Grid>

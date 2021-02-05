@@ -58,7 +58,7 @@ function Contact() {
                             <Grid item container className={classes.address_info} >
                                 <Grid item xs={5}>
                                     <Typography color="primary">
-                                        Ireland Office :
+                                        Brazil Office :
                                     </Typography>
                                     <Typography>
                                         It is a long established fact that a reader will be distracted by the readable.
@@ -66,7 +66,7 @@ function Contact() {
                                 </Grid>
                                 <Grid item xs={5}>
                                     <Typography color="primary">
-                                        UK Office :
+                                        USA Office :
                                     </Typography>
                                     <Typography>
                                         It is a long established fact that a reader will be distracted.
@@ -74,7 +74,7 @@ function Contact() {
                                 </Grid>
                                 <Grid item xs={5}>
                                     <Typography align="left" style={{ color: '#17a2b8' }}>
-                                        Email : support@quickie.eu
+                                        Email : support@great_delivery.com
                                     </Typography>
                                 </Grid>
                             </Grid>

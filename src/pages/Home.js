@@ -145,7 +145,7 @@ function Home() {
                         </Typography>
 
                         <Typography variant="subtitle1">
-                            Quickie is a mobile app, where you can order groceries and have them delivered to your door <strong>in as little as 1 hour!</strong>
+                            Great Delivery is a mobile/web app, where you can order groceries and have them delivered to your door <strong>in as little as 1 hour!</strong>
                         </Typography>
                         <Typography variant="subtitle1">
                             <strong> our first delivery is FREE </strong>
@@ -175,7 +175,7 @@ function Home() {
                                 <Paper elevation={3} component="div" className={classes.box} >
                                     <Box component="div" p={3}>
                                         <Typography variant="h4">
-                                            Order online with the Quickie App
+                                            Order online with the Great Delivery App
                                         </Typography>
 
                                         <div style={{ marginBottom: '20px' }} />
@@ -261,7 +261,7 @@ function Home() {
                                         <div style={{ marginBottom: '20px' }} />
 
                                         <Typography variant="subtitle1">
-                                            Forget "next day delivery", with Quickie you get what you want, when you want it! All in 1, 2 or 3 hours.
+                                            Forget "next day delivery", with Great Delivery you get what you want, when you want it! All in 1, 2 or 3 hours.
                                         </Typography>
                                     </Box>
                                 </Paper>
@@ -358,12 +358,12 @@ function Home() {
                     </Grid>
                 </Grid>
 
-                {/* QUICKIE AS SEEN ON */}
+                {/* Great Delivery AS SEEN ON */}
 
                 <Grid container item xs={12} style={{margin: '25px 0'}}>
                     <Grid item xs={12}>
                         <Typography variant="h4" color="primary" align="center">
-                            Quickie as seen on
+                            Great Delivery as seen on
                         </Typography>
                     </Grid>
 

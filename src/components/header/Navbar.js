@@ -66,9 +66,9 @@ export default function ElevateAppBar(props) {
     { link: "/#home", name: "HOME", icon: <HomeIcon /> },
     { link: "/#about", name: "ABOUT", icon: <PermIdentityIcon /> },
     { link: "/#features", name: "features", icon: <WorkIcon /> },
-    { link: "/#download", name: "download quickie", icon: <MailIcon /> },
+    { link: "/#download", name: "download GD", icon: <MailIcon /> },
     { link: "/contact", name: "contact", icon: <MailIcon /> },
-    { link: "/work", name: "work with quickie", icon: <MailIcon /> },
+    { link: "/work", name: "work with GD", icon: <MailIcon /> },
   ];
 
   return (
@@ -79,7 +79,7 @@ export default function ElevateAppBar(props) {
             <Toolbar className={classes.toolbar} disableGutters>
               <Link className={classes.noDecoration} href="/#" variant="button">
                 <Typography variant="h4" color="primary">
-                  quickie
+                  Great Delivery
                 </Typography>
               </Link>
 
